@@ -1,0 +1,136 @@
+.myNavbar {
+
+&-user{
+    &-auth{
+        float: right;
+        &>a{
+            &>i{
+                color : $primaryColor;
+            }
+        }
+    }
+}
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    color: $primaryColor;
+
+    &-curator{
+        color:  $curatorPrimary;
+        & ul{
+            & li{
+                & button{
+                    border-color: $curatorPrimary !important;
+                    &:hover {
+                        background-color: $curatorPrimary !important;
+                        color: #fff;
+
+                    }
+                }
+            }
+        }
+    }
+    &-logo {
+
+        & img {
+            width: 14rem;
+        }
+
+    }
+
+    &-links {
+        & ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            & li {
+                display: inline-block;
+
+                & button {
+                    border: 1px solid $primaryColor;
+                    margin: 1rem 0rem;
+                    margin-right: 1rem;
+                    font-size: 2.6rem;
+                    padding: 0.2rem 1rem;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: 0.25s all ease;
+                    font-family: luxia-semi-bold;
+                    text-transform: uppercase;
+                    background-color: #fff;
+                    &:hover {
+                        background-color: $primaryColor;
+                        color: #fff;
+
+                    }
+                }
+            }
+
+
+        }
+
+        &-userName {
+            font-size: 2rem;
+            position: absolute;
+            top: 1.5rem;
+            right: 11rem;
+        }
+
+        &-login {
+
+            &-icon {
+                position: absolute;
+                right: 7rem;
+                top: 2rem;
+                font-size: 2.5rem;
+                cursor: pointer;
+            }
+
+            &-body {
+                position: absolute;
+                right: 3.5rem;
+                top: 1rem;
+                width: 33rem;
+                height: 50rem;
+                border: 2px solid $boxShadow;
+                background-color: $boxShadow;
+                -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 92%, 78% 92%, -100% 273%, 0% 75%);
+                clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 92%, 78% 92%, -100% 273%, 0% 75%);
+                transform: rotate(180deg) scaleX(-1);
+                -webkit-transform: rotate(180deg) scaleX(-1);
+                z-index: 999999;
+
+                &>ul {
+                    transform: rotate(180deg) scaleX(-1);
+                    -webkit-transform: rotate(180deg) scaleX(-1);
+                    position: absolute;
+                    bottom: 10rem;
+                    right: 0rem;
+
+                    &>li {
+                        margin: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active-navLink {
+    & button {
+        background-color: $primaryColor !important;
+        color: #fff;
+        box-shadow: 10px 9px 6px $boxShadow;
+
+    }
+
+    &-curator{
+        & button{
+            background-color: $curatorPrimary !important;
+            color: #fff;
+            box-shadow: 10px 9px 6px $boxShadow;
+
+        }
+    }
+}

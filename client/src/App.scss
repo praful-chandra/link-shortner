@@ -1,0 +1,29 @@
+@import './scss/global';
+@import './scss/variables';
+@import './scss/fonts';
+@import './scss/common.scss';
+
+
+@import './components/Navbar/navbar';
+ @import './components/Article/ArticleBig';
+ @import './components/Article/ArticleSmall';
+ @import './components/Article/ViewArticle.scss';
+ @import './components/CuratedStyles/curatedStyles';
+ @import "./components/Curator/quickinfo";
+ @import "./components//Curator//Profile";
+@import "./components/styles/StylePage";
+@import "./components/auth//auth";
+@import "./components/design/designPage.scss";
+@import "./components/backend/admin/AdminAuth.scss";
+// @import "./components/Admin/createBlog";
+// @import "./components/Admin/adminDashboars";
+// @import "./components//Curator/EditStyle";
+// @import "./components/Curator/curator";
+
+
+@import "./components/backend/admin/dashboard/dashboard.scss";
+@import "./components/backend/writer/dashboard/writerDash.scss";
+@import "./components/backend/admin/dashboard/viewprofile/viewProfile.scss";
+
+@import "./components/backend/curator/dashboard/dashboard.scss";
+

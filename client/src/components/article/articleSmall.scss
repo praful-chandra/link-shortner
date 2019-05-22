@@ -1,0 +1,46 @@
+.articleSmall {
+    border: 1px solid $primaryColor;
+    margin: 15rem auto;
+    width: 150rem;
+    padding: 0.5rem 2rem;
+
+    &-item {
+       transform: translateY(-3rem);
+        & img {
+            width: 44rem;
+            height: 44rem;
+            object-fit: cover;
+            object-position:  50% 50%;
+        }
+
+        &-title{
+            font-size: 2.2rem;
+            font-family: luxia-semi-bold;
+            text-transform: uppercase;
+            text-align: left;
+            font-weight: bold;
+            color: $textColor;  
+            margin-top: 2rem;
+            max-width: 44rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .articleSmall{
+        width: 80%;   
+        margin: 5rem auto;
+        display: block !important;
+
+        &-item{
+            transform: translate(0rem,0rem);
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 5rem;
+
+            &-title{
+                text-align: left;
+            }
+        }
+    }
+}
