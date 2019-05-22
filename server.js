@@ -93,9 +93,7 @@ app.use(bodyParser.urlencoded({extended : false}));
 app.use(bodyParser.json());
 
 //root route
-app.get("/", (req, res) => {
-  res.json({ message: "welcome to infrnt" });
-});
+
 
 app.use("/api/uploads",express.static('uploads'));
 
@@ -119,7 +117,7 @@ app.use("/api/style",styleRoutes);
 app.use("/api/design",designRoutes);
 
 // serve static routes to client
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV !== 'production') {
   // Set static folder
   app.use(express.static('client/build'));
 
