@@ -1,0 +1,145 @@
+.login{
+    &-wrapper{
+        width: 100%;
+        height : 100vh;
+        overflow: hidden;
+    }
+
+    &-body{
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+      
+        &-circle{
+            background-color: $accent-color;
+            border-radius: 100%;
+            position: relative;
+            &-1{
+                width: 79rem;
+                height: 79rem;
+                left: -32rem;
+                top: -32rem;
+            }
+
+            &-2{
+                    width: 39rem;
+                    height: 39rem;
+                    left: 160rem;
+                    top: -17rem;
+            }
+        }
+    }
+
+    &-content{
+        position: fixed ;
+        width: 156rem;
+        height: 75rem;
+        background-color: #fff;
+        border: 5px solid $accent-color;
+        top: 7.5rem;
+        left: 16rem;
+        border-radius: 50px;
+        padding : 5rem;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+
+  
+
+        &-left{
+            border-right: $accent-color 2px solid;
+            &-logo{
+                width: 17rem;
+                height: 9rem;
+                margin: 1rem auto;
+
+                & img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &-form{
+                color: $accent-color;
+                width: 70%;
+                margin: 10rem auto;
+                & > *{
+                    display: block;  
+                    font-size: 2.2rem;
+                    font-weight: bold;
+                }
+                & :nth-child(2){
+                    margin-bottom: 4rem;
+                }
+               
+
+                &> input{
+                    width: 100%;
+                    height: 7rem;
+                    padding: 2rem;
+                    color: $accent-color;
+                    border-radius: 10px;
+                    outline: 0 none;
+                    border: 1px solid ;
+                    transition: 0.5s all;
+                    cursor: pointer;
+                    &:focus{
+                        background-color: $accent-light;
+                        border: 2px solid;
+                    }
+                }
+
+                & button{
+                    background-color: $accent-color;
+                    color: #fff;
+                    width: 32rem;
+                    height: 5.8rem;
+                    border-radius: 10px;
+                    border: 0px solid;
+                    cursor: pointer;
+                    margin: 4rem auto;
+                    transition: all 0.5s;
+                    &:hover{
+                        border: 2px solid $accent-color;
+                        background-color: $accent-light;
+                        color: $accent-color;
+                    }
+                }
+            }
+        }
+
+        &-right{
+            border-left:  $accent-color 2px solid;
+            color: $accent-color;
+            font-size: 4.5rem;
+            text-align: center;
+            font-weight: bolder;
+            padding: 3rem;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+
+            & span{
+                grid-row: 2;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .login{
+        &-content{
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            left: 0;
+
+            &-left{
+                    border: 0;
+            }
+
+            &-right{
+                display: none;
+            }
+        }
+    }
+  }

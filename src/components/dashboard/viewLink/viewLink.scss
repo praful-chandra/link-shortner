@@ -1,0 +1,91 @@
+.viewLink{
+    &-wrapper{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.089);
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+
+    &-body{
+        width: 80%;
+        height: 70vh;
+        background-color: #ffffff;
+        margin: 0 auto;
+        margin-top: 14vh;
+        border: 5px solid $accent-color;
+        border-radius: 30px;
+        position: relative;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+                width: 0px;  /* Remove scrollbar space */
+                background: transparent;  /* Optional: just make scrollbar invisible */
+            }
+      
+
+        &-close{
+            color: $accent-color;
+            font-size: 2.5rem;
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+            cursor: pointer;
+        }
+
+    &-link{
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Bitter', serif;
+        color: $dark-text;
+        margin: 1rem 0;
+
+        &-long{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &-graph{
+        width: 80%;
+        margin: 0 auto;
+        height: 50rem;
+    }
+
+    &-metrics{
+        & div{
+            color: $dark-text;
+            font-size: 1.4rem;
+
+        }
+        width: 90%;
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+    }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .viewLink{
+        &-body{
+            width: 90%;
+            height: 90vh;
+            margin-top: 5vh;
+            &-graph{
+                width: 100%;
+            }
+
+            &-metrics{
+                display: block;
+
+                & div{
+                    margin-top: 4rem;
+                }
+            }
+        }
+    }
+}

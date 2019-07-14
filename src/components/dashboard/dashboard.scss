@@ -1,0 +1,312 @@
+.dashboard{
+    display: grid;
+    grid-template-columns: 8fr 0.21fr 2fr;
+    grid-gap: 1rem;
+   // align-items: center;
+
+   &-left{
+       &-topBar{
+           display: grid;
+           grid-template-columns: 1fr 8fr 1fr;
+            align-items: center;
+            justify-items: center;
+           &>div{
+               margin-top: 2rem;
+           }
+
+           &-logo{
+               & img{
+                width: 11rem;
+                height: 6rem;
+                margin: 0 auto;
+               }
+           }
+
+           &-search{
+               & input{
+                   background-color: $light-text;
+                   color: $dark-text;
+                   border: 1px solid $background-grey;
+                   width: 55rem;
+                   height: 4rem;
+                   padding: 2rem;
+                   font-size: 1.3rem;
+                   border-radius: 16px;
+                transition: all 0.25s;
+                   &:focus{
+                       outline: none;
+                       background-color: #fff;
+                       color: $dark-text;
+                       border: 2px solid $dark-text;
+                    
+                   }
+               }
+
+            & button{
+                width: 6.3rem;
+                height: 4.1rem;
+                border-radius: 0 16px 16px 0;
+                transform: translate(-6.3rem ,0.1rem);
+                border: none;
+                border-left: 1px solid $background-grey;
+                color: $dark-text;
+                font-size: 1.5rem;
+                background-color: transparent;
+                transition: all 0.25s;
+                &:focus{
+                    outline: none;
+                }
+
+                &:hover{
+                    color: #fff;
+                    background-color: $dark-text;
+                    border: $dark-text;
+                }
+            }
+           }
+       }
+
+       &-add{
+           width: 100%;
+           text-align: center;
+           margin: 8rem 0;
+           & input{
+               width: 70%;
+               height: 8rem; 
+               margin: 0 auto;
+               font-family: 'Bitter', serif;
+               font-size: 2rem;
+               padding: 1rem;
+               color: $dark-text;
+            &::placeholder{
+                color: $background-grey;
+            }
+               &:focus{  
+                   outline: none;
+                   border: 3px solid $accent-color;
+               }
+            }
+
+        & button{
+            height: 8rem;
+            width: 15rem;
+            background-color: $dark-text;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: bold;
+            border: 0;
+        }
+       }
+
+       &-list{
+           width: 117rem;
+           border: 1px solid $background-grey;
+           margin: 0 auto;
+           border-radius: 10px;
+
+           &-head{
+               color: #fff;
+               background-color: $background-grey;
+               font-size: 1.5rem;
+               padding: 1.5rem;
+               font-weight: bolder;
+               border-radius: 10px 10px 0 0;
+           }
+          & ul{
+            list-style: none;
+
+            & li{
+                padding: 2rem;
+                border-top: 1px solid $background-grey;
+                font-size: 1.3rem;
+                cursor: pointer;
+                font-weight: bold;
+                color: $dark-text;
+                & span{
+                    float: right;
+                
+                }
+            }
+          }
+       }
+   }
+
+    &-divider{
+        align-self: center;
+        &-line{
+                width : 3px; 
+                height: 70rem;
+                background-color: $light-text;
+                margin: 0 auto;
+            }
+        
+    }
+
+    &-right{
+        // height: 100vh; 
+        // overflow-y: scroll;
+        // &::-webkit-scrollbar {
+        //     width: 0px;  /* Remove scrollbar space */
+        //     background: transparent;  /* Optional: just make scrollbar invisible */
+        // }
+        // /* Optional: show position indicator in red */
+        // &::-webkit-scrollbar-thumb {
+        //     background: #FF0000;
+        // }
+        // align-self: center;
+        &-profile{
+            width: 14rem;
+            height: 16rem;
+            margin: 2rem auto;
+            color: $dark-text;
+            font-family: 'Bitter', serif;
+            text-align: center;
+            &-image{
+                width: 9.3rem;
+                height: 9.3rem;
+                margin: 1.5rem auto;
+
+                & img{
+                    width: 100%;
+                    height: 100%;
+                    border: 5px solid $accent-color;
+                    border-radius: 100%; 
+                    object-fit: cover;
+                }
+            }
+            &-name{
+                font-size: 2rem;
+            }
+
+            &-type{
+                font-size: 1.3rem;
+                text-transform: uppercase;
+            }
+
+        }
+
+        &-stats{
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 1rem;
+            list-style: none;
+             text-align: center;
+
+            &-icon{
+                width: 5rem;
+                height: 5rem;
+                border-radius: 100%;
+                background-color: $background-grey;
+                color: $light-text;
+                font-size: 2.4rem;
+                padding: 0.7rem;
+                margin: 1rem auto; 
+            }
+
+            &-count{
+                font-size: 3rem;
+                font-weight: bold;
+            }
+
+            &-name{
+                font-size: 1.1rem;
+                color: $background-grey;
+                text-transform: uppercase;
+            }
+            
+        }
+
+        &-topLinks{
+            width: 28rem;
+            background-color: $light-text;
+            border-radius: 10px;
+            list-style: none;
+            margin: 0 auto;
+            font-family: 'Bitter', serif;
+            color: $dark-text;
+            padding: 1rem;
+
+            &-title{
+                font-size: 2rem;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: 'Bitter', serif;
+
+            }
+
+            &-item{
+                width: 90%;
+                margin: 2rem auto;
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 1rem;
+                cursor: pointer;
+
+                & span{
+                    float: right;
+                    color: #fff;
+                    background-color: $dark-text;
+                    border-radius: 100%;
+                    width: 2.7rem;
+                    height: 2.7rem;
+                    text-align: center;
+                    padding-top: 0.5rem; 
+                    margin-top: -0.6rem;
+                }
+            }
+        }
+
+        &-accountLinks{
+            margin-top: 4rem;
+            text-align: center;
+            font-family: 'Bitter', serif;
+            font-size: 2rem;
+            &-item{
+                    color: $light-text;
+                    background-color: $background-grey;
+                    border: 3px solid $light-text;
+                    margin: 2rem auto;
+                    width: 20rem;
+                    border-radius: 5px;
+                    padding: 0.5rem ;
+                    cursor: pointer;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .dashboard{
+        display: block;
+
+        &-left{
+            &-topBar{
+                display: block;
+                & div{
+                    text-align: center;
+                }
+
+                &-search{
+                    & input{
+                        width: 70%; 
+                        border-radius: 10px 0 0 10px;
+                        border-right: 0;
+                    }
+
+                    & button{
+                        transform: translate(0,0.1rem);
+                        background-color: $light-text;
+                        border: 1px solid $background-grey;
+                    }
+                }
+            }
+            &-list{  
+                width: 90%;
+            }
+        }
+        &-divider{
+            display: none;   
+        }
+    }
+}
