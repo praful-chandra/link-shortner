@@ -1,0 +1,6 @@
+{
+    "mongoURI" : "mongodb://praful:superseven7@ds159574.mlab.com:59574/flblog",
+    "baseURL" :"https://infrnt.herokuapp.com/a",
+    "cookieKey" : "w19$&egauxumkbfvszgexqvnvzgdbd",
+    "secretOrKey"  : "thisissomerandomtextblablablafofofoffoooobooobooobooobooo"
+}
